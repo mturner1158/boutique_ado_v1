@@ -7,7 +7,7 @@
 */
 
 var stripePublicKey = $("#id_stripe_public_key").text().slice(1, -1);
-var clientSecret = $("#id_client_secret").text().slice(1, -1);
+var client_secret = $("#id_client_secret").text().slice(1, -1);
 var stripe = Stripe(stripePublicKey);
 var elements = stripe.elements();
 var style = {
@@ -65,7 +65,7 @@ form.addEventListener("submit", function (ev) {
 
   $.post(url, postData).done(function () {
     stripe
-      .confirmCardPayment(clientSecret, {
+      .confirmCardPayment(client_secret, {
         payment_method: {
           card: card,
           billing_details: {
