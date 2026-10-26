@@ -1,0 +1,10 @@
+Hello {{ order.full_name }},
+
+Thi sis a confirmaiton of your order at Boutqieu Ado. Your order information is below: 
+
+Order number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: $ {{ order.order_total }}
+Delivery : ${{ order.deliver_cost }}
+Grand Total: ${{ order.grand_total }}
